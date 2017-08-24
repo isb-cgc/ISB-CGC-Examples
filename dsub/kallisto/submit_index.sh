@@ -14,7 +14,7 @@ DOCKER_IMAGE=nareshr/kallisto:v0.43
 
 # Reference database
 REF=Homo_sapiens.GRCh37.cdna.all.fa.gz
-REFURL=ftp://ftp.ensembl.org/pub/grch37/current/fasta/homo_sapiens/cdna/${REF}
+REF_URL=ftp://ftp.ensembl.org/pub/grch37/current/fasta/homo_sapiens/cdna/${REF}
 
 # Storage locations
 GS_BUCKET=${GS_BUCKET:-cgc-kallisto-example}
