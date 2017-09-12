@@ -13,6 +13,7 @@ In the following example we use the program [kallisto](https://pachterlab.github
 * The last item you will need is a input/output Google Storage bucket for input/output files.  If you don't already have one you can create one using either the Google Console or the command line using the command:
 
 ### Build an index
+
 Prior to running kallisto on sequencing reads, one has to first create index of the reference transcriptome file.  This index file is used to perform rapid pseudoalignments on the reads instead of having to align all the reads against the reference.  Once created this index file can be used to analyze as many sample files as desired.  For this example we are going to use the Genome Reference Consortium Human Build 37 from Ensembl.  This file consists of transcript sequences for actual and possible genes, including pseudogenes, NMD and the like, and is available from the FTP site.  
 
 So we'll first need to copy the file into our Google Storage Bucket:
@@ -50,7 +51,25 @@ Waiting for: kallisto-i--<user-id>--170808-225609-25.
 
 ### Conversion to fastq
 
-RNA-Seq data in ISB-CGC are stored in bam files, a binary format for storing sequencing data.  For this example we're going to use a publicly available bam files for colorectal cancer from the CPTAC project.  The program kalllisto however only reads fastq files, which is a text-based format for storing both a sequence and its corresponding quality scores.  Therefore before being able to use kallisto we'll first need to convert the bam files into fastq.  For this we'll use the program bedtools which contains the command bedtofastq.  Like before, we'll also use a pre-build docker container from DockerHub and submit the job to Google pipelines.  The command is:
+RNA-Seq data in ISB-CGC are stored in bam files, a binary format for storing sequencing data.  For this example we're going to use a publicly available bam files for colorectal cancer from the CPTAC project.  The program kalllisto however only reads fastq files, which is a text-based format for storing both a sequence and its corresponding quality scores.  Therefore before being able to use kallisto we'll first need to convert the bam files into fastq.  For this we'll use two
+programs, 1) samtools to sort the reads, followed by 2) bedtools which contains the command bedtofastq to convert the sorted file to two fastq files (forward and reverse reads).  Like before, we'll also use a pre-build docker container from DockerHub and submit the job to Google pipelines.  
+
+The first command to sort the bam file is:
+
+```
+dsub \
+   --name kallisto_sort \
+   --project ${GS_PROJECT} \
+   --zones 'us-*' \
+   --image "biocontainers/samtools " \
+   --input "BAM=gs://isb-cgc-open/CPTAC/Phase_II/TCGA_Colorectal_Cancer_S_022/TCGA_Colorectal_Cancer_proBAM_PSM_genome_mapping_files/All_CPTAC_customDB.bam" \
+   --output "SBAM=${GS_BUCKET}/All_CPTAC_customDB.sort.bam" \
+   --logging ${GS_BUCKET}/log \
+   --command 'sort -n ${BAM} > ${SBAM}' \
+   --wait
+```
+
+And the second command to do the conversion is:
 
 ```
 dsub \
@@ -58,10 +77,11 @@ dsub \
    --project ${GS_PROJECT} \
    --zones 'us-*' \
    --image "biocontainers/bedtools" \
-   --input "BAM=gs://isb-cgc-open/CPTAC/Phase_II/TCGA_Colorectal_Cancer_S_022/TCGA_Colorectal_Cancer_proBAM_PSM_genome_mapping_files/All_CPTAC_customDB.bam" \
-   --output "FASTQ=${GS_BUCKET}/All_CPTAC_customDB.fastq" \
+   --input "SBAM=${GS_BUCKET}/All_CPTAC_customDB.sort.bam" \
+   --output "FASTQ1=${GS_BUCKET}/All_CPTAC_customDB.sort.1.fastq" \
+   --output "FASTQ2=${GS_BUCKET}/All_CPTAC_customDB.sort.2.fastq" \
    --logging ${GS_BUCKET}/log \
-   --command 'bedtools bamtofastq -i ${BAM} -fq ${FASTQ}' \
+   --command 'bedtools bamtofastq -i ${SBAM} -fq ${FASTQ1} -fq2 ${FASTQ2}' \
    --wait
 ```
 
