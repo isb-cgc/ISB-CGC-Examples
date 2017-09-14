@@ -1,0 +1,4 @@
+{
+   "kallisto.refFasta": "/home/jslagel/ISB-CGC-Examples/wdl/kallisto/data/Homo_sapiens.GRCh37.cdna.all.fa.gz",
+   "kallisto.readsBam": [ "/home/jslagel/ISB-CGC-Examples/wdl/kallisto/data/All_CPTAC_customDB.bam" ]
+}
