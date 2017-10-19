@@ -6,8 +6,8 @@
 set -euo pipefail 
 set -x
 
-# Google project 
-GS_PROJECT=${GS_PROJECT:-XXXXXXX}
+# Google project
+#GS_PROJECT=
 
 # Docker image to use
 DOCKER_IMAGE=nareshr/kallisto:v0.43
