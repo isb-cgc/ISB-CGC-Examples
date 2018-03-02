@@ -1,0 +1,13 @@
+--input ES_BAM_FILE	--output ES_FQ1_FILE	--output ES_FQ2_FILE
+gs://isb-cgc-open/NCI-GDC/legacy/CCLE/CCLE-LUSC/RNA-Seq/Aligned_reads/01520b32-7a1c-43c5-9471-a7bb2eac9e94/G41716.IA-LM.5.bam	gs:///ericscript/CCLE-IA-LM/reads_1.fastq.gz	gs:///ericscript/CCLE-IA-LM/reads_2.fastq.gz
+gs://isb-cgc-open/NCI-GDC/legacy/CCLE/CCLE-LUSC/RNA-Seq/Aligned_reads/f62a7d4b-1d78-4471-b366-71ab9b296720/G41690.NCI-H460.5.bam	gs:///ericscript/CCLE-NCI-H460/reads_1.fastq.gz	gs:///ericscript/CCLE-NCI-H460/reads_2.fastq.gz
+gs://isb-cgc-open/NCI-GDC/legacy/CCLE/CCLE-LUSC/RNA-Seq/Aligned_reads/10b2db78-b409-4074-935f-bccdc20ac756/G30580.T3M-10.1.bam	gs:///ericscript/CCLE-T3M-10/reads_1.fastq.gz	gs:///ericscript/CCLE-T3M-10/reads_2.fastq.gz
+gs://isb-cgc-open/NCI-GDC/legacy/CCLE/CCLE-LUSC/RNA-Seq/Aligned_reads/d77e8809-d688-4bb1-8041-6d774c50c1ca/G28534.NCI-H810.1.bam	gs:///ericscript/CCLE-NCI-H810/reads_1.fastq.gz	gs:///ericscript/CCLE-NCI-H810/reads_2.fastq.gz
+gs://isb-cgc-open/NCI-GDC/legacy/CCLE/CCLE-LUSC/RNA-Seq/Aligned_reads/cbf2f7c7-ded1-4ff0-afc8-222ec3c404f2/G41704.NCI-H1581.5.bam	gs:///ericscript/CCLE-NCI-H1581/reads_1.fastq.gz	gs:///ericscript/CCLE-NCI-H1581/reads_2.fastq.gz
+gs://isb-cgc-open/NCI-GDC/legacy/CCLE/CCLE-LUSC/RNA-Seq/Aligned_reads/427b9dee-4905-4b92-98b0-c7b700e8986c/G28041.LCLC-97TM1.1.bam	gs:///ericscript/CCLE-LCLC-97TM1/reads_1.fastq.gz	gs:///ericscript/CCLE-LCLC-97TM1/reads_2.fastq.gz
+gs://isb-cgc-open/NCI-GDC/legacy/CCLE/CCLE-LUSC/RNA-Seq/Aligned_reads/ff04194f-7c26-4cb1-a763-04ef0f377752/G27304.HCC-1438.1.bam	gs:///ericscript/CCLE-HCC-1438/reads_1.fastq.gz	gs:///ericscript/CCLE-HCC-1438/reads_2.fastq.gz
+gs://isb-cgc-open/NCI-GDC/legacy/CCLE/CCLE-LUSC/RNA-Seq/Aligned_reads/e48ea2ee-1dda-4061-a199-6e22fd2df382/G25212.NCI-H661.1.bam	gs:///ericscript/CCLE-NCI-H661/reads_1.fastq.gz	gs:///ericscript/CCLE-NCI-H661/reads_2.fastq.gz
+gs://isb-cgc-open/NCI-GDC/legacy/CCLE/CCLE-LUSC/RNA-Seq/Aligned_reads/e6075d40-df96-4457-9350-cc632931ec39/G28061.LCLC-103H.1.bam	gs:///ericscript/CCLE-LCLC-103H/reads_1.fastq.gz	gs:///ericscript/CCLE-LCLC-103H/reads_2.fastq.gz
+gs://isb-cgc-open/NCI-GDC/legacy/CCLE/CCLE-LUSC/RNA-Seq/Aligned_reads/6108dcae-c84c-43ca-b33b-065ee422eea0/G41697.COR-L23.5.bam	gs:///ericscript/CCLE-COR-L23/reads_1.fastq.gz	gs:///ericscript/CCLE-COR-L23/reads_2.fastq.gz
+gs://isb-cgc-open/NCI-GDC/legacy/CCLE/CCLE-LUSC/RNA-Seq/Aligned_reads/112eb28d-52a1-43eb-8805-640b21056879/G28592.NCI-H1155.1.bam	gs:///ericscript/CCLE-NCI-H1155/reads_1.fastq.gz	gs:///ericscript/CCLE-NCI-H1155/reads_2.fastq.gz
+gs://isb-cgc-open/NCI-GDC/legacy/CCLE/CCLE-LUSC/RNA-Seq/Aligned_reads/8c0d94ae-a908-47c9-a301-3b5c3d0fafaa/G28021.LU99.1.bam	gs:///ericscript/CCLE-LU99/reads_1.fastq.gz	gs:///ericscript/CCLE-LU99/reads_2.fastq.gz

@@ -1,0 +1,13 @@
+--input ES_FQ1_FILE	--input ES_FQ2_FILE	--output-recursive RESULT
+gs:///ericscript/CCLE-IA-LM/reads_1.fastq.gz	gs:///ericscript/CCLE-IA-LM/reads_2.fastq.gz	gs:///ericscript/CCLE-IA-LM/results
+gs:///ericscript/CCLE-NCI-H460/reads_1.fastq.gz	gs:///ericscript/CCLE-NCI-H460/reads_2.fastq.gz	gs:///ericscript/CCLE-NCI-H460/results
+gs:///ericscript/CCLE-T3M-10/reads_1.fastq.gz	gs:///ericscript/CCLE-T3M-10/reads_2.fastq.gz	gs:///ericscript/CCLE-T3M-10/results
+gs:///ericscript/CCLE-NCI-H810/reads_1.fastq.gz	gs:///ericscript/CCLE-NCI-H810/reads_2.fastq.gz	gs:///ericscript/CCLE-NCI-H810/results
+gs:///ericscript/CCLE-NCI-H1581/reads_1.fastq.gz	gs:///ericscript/CCLE-NCI-H1581/reads_2.fastq.gz	gs:///ericscript/CCLE-NCI-H1581/results
+gs:///ericscript/CCLE-LCLC-97TM1/reads_1.fastq.gz	gs:///ericscript/CCLE-LCLC-97TM1/reads_2.fastq.gz	gs:///ericscript/CCLE-LCLC-97TM1/results
+gs:///ericscript/CCLE-HCC-1438/reads_1.fastq.gz	gs:///ericscript/CCLE-HCC-1438/reads_2.fastq.gz	gs:///ericscript/CCLE-HCC-1438/results
+gs:///ericscript/CCLE-NCI-H661/reads_1.fastq.gz	gs:///ericscript/CCLE-NCI-H661/reads_2.fastq.gz	gs:///ericscript/CCLE-NCI-H661/results
+gs:///ericscript/CCLE-LCLC-103H/reads_1.fastq.gz	gs:///ericscript/CCLE-LCLC-103H/reads_2.fastq.gz	gs:///ericscript/CCLE-LCLC-103H/results
+gs:///ericscript/CCLE-COR-L23/reads_1.fastq.gz	gs:///ericscript/CCLE-COR-L23/reads_2.fastq.gz	gs:///ericscript/CCLE-COR-L23/results
+gs:///ericscript/CCLE-NCI-H1155/reads_1.fastq.gz	gs:///ericscript/CCLE-NCI-H1155/reads_2.fastq.gz	gs:///ericscript/CCLE-NCI-H1155/results
+gs:///ericscript/CCLE-LU99/reads_1.fastq.gz	gs:///ericscript/CCLE-LU99/reads_2.fastq.gz	gs:///ericscript/CCLE-LU99/results
