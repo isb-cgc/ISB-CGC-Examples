@@ -1,6 +1,6 @@
 # Quantification with kallisto
 
-In the following example we use the program [kallisto](https://pachterlab.github.io/kallisto/about.html) by the Pachter Lab to quantify transcript abundances from RNA-Seq data from high-throughput sequencing reads provided in the ISB CGC repository, all being done using the Google Cloud.   The data will reside in Google Cloud Storage buckets and execution of kallisto is performed by submitting a qsub job to Google Pipelines.   The job executes on a Google Compute virtual machine with input files downloaded and output pushed to Google Cloud Storage.
+In the following example we use the program [kallisto](https://pachterlab.github.io/kallisto/about.html) by the Pachter Lab to quantify transcript abundances from RNA-Seq data from high-throughput sequencing reads provided in the ISB CGC repository, all being done using the Google Cloud.   The data will reside in Google Cloud Storage buckets and execution of kallisto is performed by submitting a dsub job to Google Pipelines.   The job executes on a Google Compute virtual machine with input files downloaded and output pushed to Google Cloud Storage.
 
 ## Setup
 
